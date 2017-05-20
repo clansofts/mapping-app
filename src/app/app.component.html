@@ -1,9 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<div id="wrapper">
 
-<ul>
-  <li *ngFor="let vehicle of vehicles">
-    Fahrzeug: {{vehicle.vehicleId}}
-  </li>
-</ul>
+<div id="left">
+  <span *ngIf="vehicles">{{vehicles.length}} vehicles</span>
+  <ul>
+    <li *ngFor="let vehicle of vehicles">
+      vehicle {{vehicle.vehicleId}}
+    </li>
+  </ul>
+</div>
+
+<div id="right">
+  <div id="map"></div>
+</div>
+
+</div>
